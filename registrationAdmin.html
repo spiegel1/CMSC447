@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<!--
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
+-->
+<html>
+<head>
+    <title>Registration</title>
+<style>
+.center {
+	margin: auto;
+	width: 50%;
+	border: 3px solid black;
+	padding: auto;
+	padding-bottom: 20px;
+	text-aligh: center;
+}
+.button {
+	position: absolutle;
+	top: 50%;
+}
+.wrapper {
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+    <h1 align="center">PolitiForum</h1>
+	<div class = "center">
+		<form action="Register">
+			<br>
+			<font size="+3"><p align="center"><b>Registration</b></p></font>
+			<p align="center">Email <input type="text" id="email"></p>
+			<p align="center">UserName <input type="text" id="userName"></p>
+			<p align="center">US state <input type="text" id="USstate"></p>
+			<p align="center">password <input type="text" id="password"></p>
+
+			<br>
+			<div class="wrapper">
+				<button class="button" id="register">Submit</button>
+			</div>
+		</form>
+	</div>
+</body>
+
+
+</html>
