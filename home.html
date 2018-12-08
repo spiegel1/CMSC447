@@ -7,13 +7,17 @@
 	
 <style>
 .left {
-	width:25%;
 	text-align: justify;
-	justify-content: space-between;
+	justify-content: space-around;
 	border: 3px solid black;
-	padding: 20px 0px 30px 0px;
-	padding-left: 5%;
-	margin-left: 7%;
+	padding: 20px 20px 30px 20px;
+	<!margin-left: 5%;>
+	align-self: end;
+}
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 .button {
 	position: absolutle;
@@ -27,8 +31,16 @@
 <body>
     <h1 align="center">PolitiForum</h1>
 	<form id="search">
-	<p class="left">Search:<input type="text" id="searchText"><button id="searchButton">search</button></p>
-
-	
+	<div class="flex-container">
+		<div><p class="left">Search:<input type="text" id="searchText"><button id="searchButton">search</button></div>
+		<div><p id="user" class="left">Username<!-- TODO: fill with actual username -->
+			<button id="upVote">UpVote</button>
+			<button id="downVote">DownVote</button>
+			<button id="report">Report</button>
+			<br><br>
+			<textarea rows="4" cols="50">post content</textarea>
+		</div>
+	</p>
+	</div>
 </body>
 </html>
