@@ -27,31 +27,35 @@
 <h1 align="center">PolitiForum</h1>
 
 <div class = "center">
+	
+	<!-- generic login -->
     <h2 align="center">Login</h2>
-    <form id="login">
-	<p align="center">Email:<input type="text" id="email" /></p>
-    <p align="center">Password:<input type="text" id="password" /></p>
-	<div class = "wrapper">
-		<button class="button" id="submit">submit</button>
-	</div>
+    <form action="Login">
+		<p align="center">Email:<input type="text" name="email" /></p>
+		<p align="center">Password:<input type="text" name="password" /></p>
+		<div class = "wrapper">
+			<input type="submit" value="Login"><br>
+		</div>
 	</form>
-	<p align = "center"><b>New User?</b></p>
-	<a href="registration.html">
-	<div class="wrapper">
-		<button class="button" id="register">register</button>
-	</div>
-	</a>
+	
+	<!-- register form -->
+	<form action="Newuser">
+		<p align = "center"><b>New User?</b></p>
+		<div class="wrapper">
+			<!-- register-->
+			<input type="submit" value="Register"><br>
+		</div>
+	</form>
 	<br>
-	<a href="loginAdmin.html">
-	<div class="wrapper">
-		<button class="button" id="loginAdmin">login as administrator</button>
-	</div>
-	</a>
+	<!-- login as admin-->
+	<!--<p align="center"><b>Login as Admin</p>-->
+	<!-- <form action="LoginAdmin">
+		<div class="wrapper">
+			<!-- login as admin -->
+			<!-- <input type="submit" value="LoginAdmin"><br>
+		</div>
+	</form> -->
 </div>
 
-    <script>
-        var email = document.querySelector("email");
-        var password = document.querySelector("password");
-    </script>
 </body>
 </html>
