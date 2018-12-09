@@ -84,27 +84,27 @@
 				//create new div then put into new div everytime 
 				var div = document.createElement("div");
 				//div.innerHTML = '<span class="post-box">';
+				div.setAttribute("class", "post-box");
 				document.body.appendChild(div);
 				//var div = document.getElementById("post-box");
 				var content = document.getElementById("content").value;
-				createDiv.innerHTML += content;
+				div.innerHTML += content;
 				
-				var div1 = document.getElementById("post-button");
+				//var div1 = document.getElementById("post-button");
 				// create new div
 				//var divtest = document.createElement("div");
 				var button = document.createElement("input");
 				button.setAttribute("type", "submit");
 				button.setAttribute("value", "upvote");
-				div1.appendChild(button);
+				div.appendChild(button);
 				<!-- need to find a way to create new dive on creation as well as buttons-->
 			}
 		</script>
 	</div>
-	<div class="post-box" id="post-box" align="right">
+	<!-- <div class="post-box" id="post-box" align="right">
 		<div class="post-button" id="post-button">
 		</div>
 	</div>
-	<!--
 	<div class="post-box">
 		<div class="delete">
 			<input type="submit" value="X">
