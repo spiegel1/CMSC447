@@ -86,10 +86,7 @@
 				//div.innerHTML = '<span class="post-box">';
 				div.setAttribute("class", "post-box");
 				document.body.appendChild(div);
-				//var div = document.getElementById("post-box");
-				var content = document.getElementById("content").value;
-				div.innerHTML += content;
-				
+				//var div = document.getElementById("post-box");				
 				//var div1 = document.getElementById("post-button");
 				// create new div
 				//var divtest = document.createElement("div");
@@ -97,6 +94,19 @@
 				button.setAttribute("type", "submit");
 				button.setAttribute("value", "upvote");
 				div.appendChild(button);
+				
+				var button1 = document.createElement("input");
+				button1.setAttribute("type", "submit");
+				button1.setAttribute("value", "downvote");
+				div.appendChild(button1);
+				
+				var button2 = document.createElement("input");
+				button2.setAttribute("type", "submit");
+				button2.setAttribute("value", "report");
+				div.appendChild(button2);
+				
+				var content = document.getElementById("content").value;
+				div.innerHTML += content;
 				<!-- need to find a way to create new dive on creation as well as buttons-->
 			}
 		</script>
