@@ -50,14 +50,14 @@
 }
 .delete {
 	margin: auto;
-	margin-left: 0;
+	margin-right:; 0;
 	content-align: right;
 	text-align: right;
 	align: right;
 }
 </style>
 </head>
-<body>
+<body id="body">
 	<h1 align="center">PolitiForum
 	<input type="submit" value="logout">
 	</h1>
@@ -76,6 +76,7 @@
 		<!-- <form action="post"> -->
 		<p>Username</p>
 		<textarea rows="4" cols="50" id="content">post content</textarea>
+		<!-- may create 2 onclick functions, one that creates the post and the buttons to the left and one that creates the exit button with a function to delete onclick. This wont work i still need to define an onclick function for the exit button nested in the js-->
 		<input type="submit" value="post" onclick="postUpdate()">
 		<!-- </form> -->
 		<script>
@@ -108,6 +109,19 @@
 				var content = document.getElementById("content").value;
 				div.innerHTML += content;
 				<!-- need to find a way to create new dive on creation as well as buttons-->
+
+				var exitButton = document.createElement("input");
+				exitButton.setAttribute("type", "submit");
+				exitButton.setAttribute("value", "X");
+				exitButton.setAttribute("class", "delete");
+				exitButton.setAttribute("onclick", "deletePost()");
+				div.appendChild(exitButton);
+
+				function deletePost() {
+					var post = document.getElementById("div");
+					var parent = document.getElementById("body");
+					parent.removeChild(post);
+				}
 			}
 		</script>
 	</div>
