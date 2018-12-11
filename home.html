@@ -40,6 +40,7 @@
 	margin-right: 30%;
 	margin-left: 30%;
 	margin-top: 20px;
+	justify-content: space-between;
 }
 .post-button {
 	margin: auto;
@@ -72,7 +73,7 @@
 		<input type="submit" value="Search">
 	</div>
 	</form>
-	<div class="box">
+	<div class="box" id="container">
 		<!-- <form action="post"> -->
 		<p>Username</p>
 		<textarea rows="4" cols="50" id="content">post content</textarea>
@@ -86,6 +87,7 @@
 				var div = document.createElement("div");
 				//div.innerHTML = '<span class="post-box">';
 				div.setAttribute("class", "post-box");
+				div.setAttribute("id", "postDiv");
 				document.body.appendChild(div);
 				//var div = document.getElementById("post-box");				
 				//var div1 = document.getElementById("post-button");
@@ -114,13 +116,13 @@
 				exitButton.setAttribute("type", "submit");
 				exitButton.setAttribute("value", "X");
 				exitButton.setAttribute("class", "delete");
-				exitButton.setAttribute("onclick", "deletePost()");
+				exitButton.addEventListener("click", deletePost);
 				div.appendChild(exitButton);
 
 				function deletePost() {
-					var post = document.getElementById("div");
-					var parent = document.getElementById("body");
-					parent.removeChild(post);
+					var post = document.getElementById("postDiv");
+					//var parent = document.getElementById("body");
+					post.parentNode.removeChild(post);
 				}
 			}
 		</script>
