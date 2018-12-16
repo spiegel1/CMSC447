@@ -73,6 +73,7 @@
 		<input type="submit" value="Search">
 	</div>
 	</form>
+	
 	<div class="box" id="container">
 		<!-- <form action="post"> -->
 		<p>Username</p>
@@ -88,7 +89,13 @@
 				//div.innerHTML = '<span class="post-box">';
 				div.setAttribute("class", "post-box");
 				div.setAttribute("id", "postDiv");
-				document.body.appendChild(div);
+				
+				//var dbpost = document.getElementById("dbpost");
+				var oldpost = document.getElementById("postDiv");
+				var node = document.getElementById("insert");
+				//document.body.insertBefore(div, postDiv);
+				node.appendChild(div);
+				node.insertBefore(div, oldpost);
 				//var div = document.getElementById("post-box");				
 				//var div1 = document.getElementById("post-button");
 				// create new div
@@ -120,11 +127,23 @@
 				div.appendChild(exitButton);
 
 				function deletePost() {
-					var post = document.getElementById("postDiv");
+					var post = document.getElementById("insert");
 					//var parent = document.getElementById("body");
-					post.parentNode.removeChild(post);
+					post.getElementById("postDiv").remove();
 				}
 			}
+		</script>
+	</div>
+	
+	<div id="insert">
+	</div>
+	
+	<div class="post-box" id="dbpost">
+		<input type="submit" value="upvote">
+		<input type="submit" value="downvote">
+		<script>
+			//this will get the attribute users from the list User
+			//<% List<User> userList = (List<User>)request.getAttribute("users"); %>
 		</script>
 	</div>
 	<!-- <div class="post-box" id="post-box" align="right">
